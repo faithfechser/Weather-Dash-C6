@@ -9,6 +9,38 @@
     <link rel="stylesheet" src="./assets/style.css">
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <h1>
+            <i>Weather Dash</i>
+        </h1>
+    </header>
+    <!-- Main Page Formatting -->
+    <main>
+        <!-- Search Bar -->
+        <form id="search-form">
+            <input type="text" id="city-input" placeholder="Enter a city">
+            <button type="submit">Search</button>
+        </form>
+        <!-- Website Sections -->
+        <!-- Current Weather -->
+        <section id="current-weather"></section>
+        <!-- Weather Forecast -->
+        <section id="forecast">
+            <header>
+                <h2>Five Day Forcast</h2>
+            </header>
+            <div class="forecast-days">
+                <div class="weatherDay"></div>
+                <div class="weatherDay"></div>
+                <div class="weatherDay"></div>
+                <div class="weatherDay"></div>
+                <div class="weatherDay"></div>
+            </div>
+        </section>
+        <!-- History -->
+        <section id="history"></section>
+    </main>
     <!-- JavaScript Connections -->
     <script src="./assets/script.js"></script>
 </body>
