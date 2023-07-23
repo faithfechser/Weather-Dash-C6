@@ -1,2 +1,30 @@
-/* #2449cc
- #dde1ee */
+body{
+    background-color: #dde1ee;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2449cc;
+    width: 100%;
+}
+
+.header {
+    padding: 30px;
+    color: #dde1ee;
+}
+
+#search-bar {
+    padding: 30px;
+}
+
+
+/* .weatherDay{
+    color: #dde1ee;
+    background-color: #2449cc;
+    display: flex;
+    flex-direction: column;
+    margin: 1vh;
+    width: 20vw;
+    justify-content: space-around;
+} */
