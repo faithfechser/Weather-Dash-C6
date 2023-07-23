@@ -2,6 +2,7 @@
     ![License](https://img.shields.io/badge/License-MIT-blue.svg)
   ## Description
   
+  Weather Dash is a website designed to search up any city to see its' current weather and forecast!
   
   ## Table of Contents
   - [Usage](#usage)
@@ -14,17 +15,20 @@
 
   ## Usage
 
-  
+  Search a city and find out the weather.
+
   ## Installation
   
-  
-  
+  n/a
+
   ## Credits & Contributions
   
+  n/a
   
   ## Tests
   
-  
+  n/a
+
   ## Questions
   
   For any questions, feel free to contact me:
