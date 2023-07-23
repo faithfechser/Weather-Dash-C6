@@ -8,30 +8,42 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./assets/images/WeatherDashFavicon.png">
     <!-- Stylesheet Connection -->
-    <link rel="stylesheet" src="./assets/style.css">
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <h1>
-            <i>Weather Dash</i>
-        </h1>
-    </header>
-    <!-- Main Page Formatting -->
-    <main>
+    <div class="header-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>
+                <i>Weather Dash</i>
+            </h1>
+        </div>
         <!-- Search Bar -->
-        <form id="search-form">
+        <form id="search-bar" display="none">
             <input type="text" id="city-input" placeholder="Enter a city">
             <button type="submit">Search</button>
         </form>
-        <!-- Website Sections -->
+    </div>
+    
+    <!-- Main Page Formatting -->
+    <main>
         <!-- Current Weather -->
-        <section id="current-weather"></section>
+        <section id="current-weather">
+            <div class="currentWeatherHeader">
+                <h2 class="currentCity"></h2>
+                <h2 class="currentDate"></h2>
+            </div>
+            <div class="currentWeatherBody">
+                <h3 id="currentTemp"></h3>
+                <h3 id="currentWind"></h3>
+                <h3 id="currentHumidity"></h3>
+            </div>
+        </section>
         <!-- Weather Forecast -->
         <section id="forecast">
-            <header>
+            <aside class="FDFheader">
                 <h2>Five Day Forcast</h2>
-            </header>
+            </aside>
             <div class="forecast-days">
                 <div class="weatherDay"></div>
                 <div class="weatherDay"></div>
@@ -41,7 +53,7 @@
             </div>
         </section>
         <!-- History -->
-        <section id="history"></section>
+        <aside id="history"></aside>
     </main>
     <!-- JavaScript Connections -->
     <script src="./assets/script.js"></script>
