@@ -11,7 +11,6 @@
   - [Tests](#tests)
   - [Questions](#questions)
   - [License](#license)
-  - [License](#license)
 
   ## Usage
 
