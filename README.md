@@ -1,5 +1,5 @@
 # Weather-Dash-C6
-    ![License](https://img.shields.io/badge/License-MIT-blue.svg)
+  ![License](https://img.shields.io/badge/License-MIT-blue.svg)
   ## Description
   
   Weather Dash is a website designed to search up any city to see its' current weather and forecast!
@@ -36,6 +36,8 @@
   
   Email: faithfechser@gmail.com
 
+  All images and icons are made by me!
+
   ## License
 
-    This application is covered under the MIT license.
+  This application is covered under the MIT license.
