@@ -1,6 +1,4 @@
-body{
-    background-color: #dde1ee;
-}
+/* Header & search bar alignment */
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -8,23 +6,79 @@ body{
     background: #2449cc;
     width: 100%;
 }
-
+ 
 .header {
-    padding: 30px;
-    color: #dde1ee;
+  padding: 30px;
+  color: #dde1ee;
+}
+  
+/* Main section styling */
+main {
+display: flex;
+align-items: flex-start;
+margin-top: 20px;
 }
 
+/* Current Weather section */
+#current-weather {
+margin-right: 20px; 
+}
+
+.currentWeatherHeader {
+display: flex;
+align-items: center;
+}
+
+.currentWeatherHeader h2 {
+margin-right: 10px;
+}
+
+.currentWeatherBody {
+display: flex;
+flex-direction: column;
+}
+
+/* Weather Forecast section */
+#forecast {
+display: flex;
+flex-direction: column;
+align-items: flex-start; 
+}
+
+.FDFheader {
+margin-bottom: 10px;
+}
+
+/* CSS body */
+body {
+background-color: #dde1ee;
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+}
+
+/* Search bar styling */
 #search-bar {
-    padding: 30px;
+padding: 30px;
 }
 
+button {
+padding: 8px 15px;
+border: none;
+background-color: #ffd130;
+color: #2449cc;
+cursor: pointer;
+border-radius: 5px;
+}
 
-/* .weatherDay{
-    color: #dde1ee;
-    background-color: #2449cc;
-    display: flex;
-    flex-direction: column;
-    margin: 1vh;
-    width: 20vw;
-    justify-content: space-around;
-} */
+button:hover {
+background-color: #fed84f;
+;
+}
+
+input[type="text"] {
+padding: 8px;
+border: 1px solid #dde1ee;
+border-radius: 5px;
+margin-right: 10px;
+}
