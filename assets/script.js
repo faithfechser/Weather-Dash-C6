@@ -10,9 +10,9 @@ const currentHumidity = document.getElementById("currentHumidity");
 
 // API key
 const apiKey = 'f1b556da313e25b68a91bca1a8c4b597';
+
 // API connections
-const apiCoords = `http://api.openweathermap.org/geo/1.0/direct?q=${userInput}&appid=${apiKey}`;
-// const apiCoords = `http://api.openweathermap.org/geo/1.0/direct?q=Chicago&appid=${apiKey}`;
+const apiGeoLocation = `http://api.openweathermap.org/geo/1.0/direct?q={city}&appid=${apiKey}`;
 const apiWeather = `https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid=${apiKey}`;
 
 function displayIcon(iconCode) {
@@ -43,29 +43,31 @@ function displayIcon(iconCode) {
 //   }
 // }
 
-async function fetchWeather(city){
+async function fetchWeather(city) {
   try {
-    const coordsResponse = await fetch(apiCoords);
-    const coordsData = await coordsResponse.json();
+    const geoResponse = await fetch(apiGeoLocation.replace("{city}", city));
+    const geoData = await geoResponse.json();
 
-    if (weatherData.length === 0) {
+    if (geoData.length === 0) {
       console.log('City not found');
       return;
     }
 
-    const response = await fetch(apiWeather);
-    const weatherData = await response.json();
+    const lat = geoData[0].lat;
+    const lon = geoData[0].lon;
+    const weatherResponse = await fetch(apiWeather.replace("{lat}", lat).replace("{lon}", lon));
+    const weatherData = await weatherResponse.json();
 
-    currentCity.textContent = `City: ${coordsData.name}`;
+    currentCity.textContent = `City: ${geoData[0].name}`;
     currentDate.textContent = `Date: ${new Date().toLocaleDateString()}`;
-    displayIcon(weatherData.weather[0].icon);
-    currentTemp.textContent = `Temperature: ${weatherData.main.temp}°F`;
-    currentWind.textContent = `Wind Speed: ${weatherData.wind.speed} mph`;
-    currentHumidity.textContent = `Humidity: ${weatherData.main.humidity}%`;
+    displayIcon(weatherData.list[0].weather[0].icon);
+    currentTemp.textContent = `Temperature: ${weatherData.list[0].main.temp}°F`;
+    currentWind.textContent = `Wind Speed: ${weatherData.list[0].wind.speed} mph`;
+    currentHumidity.textContent = `Humidity: ${weatherData.list[0].main.humidity}%`;
   } catch (error) {
     console.log('Error:', error.message);
   }
-};
+}
 
 searchBar.addEventListener("submit", function (event) {
   event.preventDefault();
