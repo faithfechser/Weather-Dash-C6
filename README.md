@@ -15,6 +15,8 @@
   ## Usage
 
   Search a city and find out the weather.
+  ![Alt text](image.png)
+  [Github.io](https://faithfechser.github.io/Weather-Dash-C6/)
 
   ## Installation
   
