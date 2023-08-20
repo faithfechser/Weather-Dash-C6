@@ -16,7 +16,7 @@ const apiGeoLocation = `https://api.openweathermap.org/geo/1.0/direct?q={city}&a
 const apiWeather = `https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid=${apiKey}`;
 
 function displayIcon(iconCode) {
-  const iconUrl = `http://openweathermap.org/img/w/${iconCode}.png`;
+  const iconUrl = `https://openweathermap.org/img/w/${iconCode}.png`;
   currentWeatherIcon.src = iconUrl;
 }
 
