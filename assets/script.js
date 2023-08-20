@@ -12,7 +12,7 @@ const currentHumidity = document.getElementById("currentHumidity");
 const apiKey = 'f1b556da313e25b68a91bca1a8c4b597';
 
 // API connections
-const apiGeoLocation = `http://api.openweathermap.org/geo/1.0/direct?q={city}&appid=${apiKey}`;
+const apiGeoLocation = `https://api.openweathermap.org/geo/1.0/direct?q={city}&appid=${apiKey}`;
 const apiWeather = `https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid=${apiKey}`;
 
 function displayIcon(iconCode) {
